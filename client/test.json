@@ -1,0 +1,13 @@
+[
+  {
+    "id": 368620,
+    "field_id": 242990,
+    "crop": "corn",
+    "planted_area": "20.46",
+    "planted_area_units": "acres",
+    "population": 30000,
+    "agx_seed_hybrid": 82006,
+    "rm": 120,
+    "planting_date": "2015-04-20T05:00:00.000Z"
+  }
+]
