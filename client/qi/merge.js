@@ -31,17 +31,17 @@ var merge = function(target, source) {
     target = {};
   }
 
-  for (var attr in source) {
-    if (source.hasOwnProperty(attr)) {
-      var value = source[attr];
-      target[attr] = typeof value === 'object' ? merge(target[attr], value) : value;
-    }
+  for (property in source) {
+    var value = source[property];
+    target[property] = typeof value === 'object' ? merge(target[property], value) : value;
+  }
+
+  for (var i = 2; i < arguments.length; i++) {
+    merge(target, arguments[i]);
   }
   return target;
 };
 
-var result = merge(style1, style2);
+var result = merge({}, style1, style2);
 
 console.log(result);
-
-

@@ -15,15 +15,35 @@ var sort = function(values) {
     });
 };
 
-var swap = function(){
+var swap = function() {
 
+};
+
+var findMax1 = function(values) {
+  return values.reduce(function(max, value, index) {
+    return value > max.value ? {value: value, index: index} : max;
+  }, {value: values[0], index: -1});
 };
 
 var sort1 = function(values) {
 
-  return values;
+  return Array.apply(0, Array(values.length))
+    .map(function(value) {
+      return values.splice(findMax(values).index, 1).pop();
+    });
 };
 
-var result = sort(values);
+//var result = sort(values);
+//console.log(result);
 
-console.log(result);
+console.log(Array.apply(0, Array(values.length))
+  .map(function(value, y) {
+    return y;
+  }));
+console.log(findMax1(values));
+
+
+
+
+
+
